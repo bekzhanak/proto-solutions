@@ -1,11 +1,11 @@
 import socket
 
-socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-socket.bind(("0.0.0.0", 8000))
-socket.listen(10)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(("0.0.0.0", 8000))
+s.listen(10)
 
 while True:
-    conn, _ = socket.accept()
+    conn, address = s.accept()
     with conn:
         buffer = b""
         data = conn.recv(1024)
