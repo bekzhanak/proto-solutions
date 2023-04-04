@@ -1,4 +1,4 @@
-FROM python-3.10.0-slim-bullseye
+FROM python:3.11.2-slim-bullseye
 
 WORKDIR code
 COPY smoke%20test .
