@@ -12,4 +12,3 @@ while True:
         if not data:
             conn.sendall(buffer)
         buffer += data
-        
