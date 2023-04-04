@@ -11,4 +11,5 @@ while True:
         data = conn.recv(1024)
         if not data:
             conn.sendall(buffer)
+            break
         buffer += data
